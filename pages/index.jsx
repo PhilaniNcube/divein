@@ -205,7 +205,6 @@ const Index = () => {
           </div>
         </div>
       </form>
-      ;
     </div>
   );
 };
