@@ -10,11 +10,13 @@ const Index = () => {
   const [field, setField] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
   const [province, setProvince] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const response = await fetch('/api/submissions', {
         method: 'POST',
@@ -31,7 +33,7 @@ const Index = () => {
       });
 
       console.log(await response.json());
-
+      setLoading(false);
       router.push('/thankyou');
     } catch (error) {
       console.log(error);
@@ -203,10 +205,11 @@ const Index = () => {
           </div>
           <div className="w-full py-4 sm:px-12 px-4 bg-gray-300 mt-6 flex justify-start rounded-bl rounded-br">
             <button
+              disabled={loading}
               className="bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-2 text-sm focus:outline-none"
               type="submit"
             >
-              Register
+              {loading ? 'Loading...' : 'Register'}
             </button>
           </div>
         </div>
