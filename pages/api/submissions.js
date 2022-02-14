@@ -16,6 +16,8 @@ export default async function handler(req, res) {
     province,
   } = req.body;
 
+  console.log({ firstName, lastName, email, status, field, ageGroup });
+
   const subscribingUser = {
     firstName,
     lastName,

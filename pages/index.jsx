@@ -34,11 +34,6 @@ const Index = () => {
 
       const { message } = await response.json();
 
-      if (message.status === 400) {
-        alert('form submission failed');
-        setLoading(false);
-        return;
-      }
       console.log(message);
       setLoading(false);
       router.push('/thankyou');
