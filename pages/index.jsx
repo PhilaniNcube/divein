@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
+
 const Index = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -8,6 +10,8 @@ const Index = () => {
   const [field, setField] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
   const [province, setProvince] = useState('');
+
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,6 +31,8 @@ const Index = () => {
       });
 
       console.log(await response.json());
+
+      router.push('/thankyou');
     } catch (error) {
       console.log(error);
     }
@@ -195,7 +201,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="w-full py-4 sm:px-12 px-4 bg-gray-100 mt-6 flex justify-start rounded-bl rounded-br">
+          <div className="w-full py-4 sm:px-12 px-4 bg-gray-300 mt-6 flex justify-start rounded-bl rounded-br">
             <button
               className="bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-2 text-sm focus:outline-none"
               type="submit"
