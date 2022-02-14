@@ -26,6 +26,15 @@ export default async function handler(req, res) {
     province,
   };
 
+  const tags = [
+    subscribingUser.status,
+    subscribingUser.field,
+    subscribingUser.ageGroup,
+    subscribingUser.province,
+  ];
+
+  console.log(tags);
+
   try {
     const response = await mailchimp.lists.addListMember(process.env.LIST_ID, {
       email_address: subscribingUser.email,
@@ -41,11 +50,12 @@ export default async function handler(req, res) {
         FNAME: subscribingUser.firstName,
         LNAME: subscribingUser.lastName,
       },
-      tags: [status, field, ageGroup, province],
+      tags: tags,
     });
 
     res.status(200).json({ response });
   } catch (error) {
     console.log(error);
+    res.status(400).json({ message: error });
   }
 }

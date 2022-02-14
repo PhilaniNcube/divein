@@ -6,10 +6,10 @@ const Index = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState('student');
   const [field, setField] = useState('');
-  const [ageGroup, setAgeGroup] = useState('');
-  const [province, setProvince] = useState('');
+  const [ageGroup, setAgeGroup] = useState('19 - 30');
+  const [province, setProvince] = useState('Freestate');
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
@@ -32,11 +32,20 @@ const Index = () => {
         }),
       });
 
-      console.log(await response.json());
+      const { message } = await response.json();
+
+      if (message.status === 400) {
+        alert('form submission failed');
+        setLoading(false);
+        return;
+      }
+      console.log(message);
       setLoading(false);
       router.push('/thankyou');
     } catch (error) {
       console.log(error);
+      alert('Form submission failed');
+      setLoading(false);
     }
   };
 
