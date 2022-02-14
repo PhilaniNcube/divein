@@ -26,25 +26,18 @@ export default async function handler(req, res) {
     province,
   };
 
-  const tags = [
-    subscribingUser.status,
-    subscribingUser.field,
-    subscribingUser.ageGroup,
-    subscribingUser.province,
-  ];
+  const tags = [status, field, ageGroup, province];
 
   console.log(tags);
 
   try {
     const response = await mailchimp.lists.addListMember(process.env.LIST_ID, {
       email_address: subscribingUser.email,
-      occupation: subscribingUser.status,
-      field_of_study: field,
-      age_group: subscribingUser.ageGroup,
+
       location: {
         region: subscribingUser.province,
       },
-      province: subscribingUser.province,
+
       status: 'subscribed',
       merge_fields: {
         FNAME: subscribingUser.firstName,
