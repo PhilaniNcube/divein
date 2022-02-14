@@ -41,14 +41,14 @@ const Index = () => {
         <div className="container mx-auto shadow bg-white  rounded">
           <div className="w-11/12 mx-auto">
             <div className="xl:w-9/12 mx-auto xl:mx-0">
-              <div className="bg-center bg-cover bg-no-repeat rounded relative mt-8 h-48">
+              <div className="bg-center bg-cover bg-no-repeat rounded relative mt-6 h-48">
                 <img
                   src="/images/registration.jpg"
                   alt=""
                   className="w-full h-full object-cover overflow-hidden rounded shadow"
                 />
               </div>
-              <div className="flex justify-between mt-8">
+              <div className="flex justify-between flex-col md:flex-row md:space-x-4 mt-8">
                 <div className="mt-2 flex flex-col xl:w-2/6 lg:w-2/6 w-full">
                   <label
                     htmlFor="firstName"
@@ -84,7 +84,7 @@ const Index = () => {
                   />
                 </div>
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between flex-col md:flex-row md:space-x-4">
                 <div className="mt-2 flex flex-col xl:w-2/6 lg:w-2/6 w-full">
                   <label
                     htmlFor="email"
@@ -123,7 +123,7 @@ const Index = () => {
                   </select>
                 </div>
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between flex-col md:flex-row md:space-x-4">
                 <div className="mt-2 flex flex-col xl:w-2/6 lg:w-2/6 w-full">
                   <label
                     htmlFor="ageGroup"
@@ -181,7 +181,7 @@ const Index = () => {
                   htmlFor="field"
                   className="pb-2 text-sm font-bold text-gray-800 "
                 >
-                  Field
+                  Field Of Study/Work
                 </label>
                 <input
                   type="text"
@@ -195,7 +195,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="w-full py-4 sm:px-12 px-4 bg-gray-100 mt-6 flex justify-end rounded-bl rounded-br">
+          <div className="w-full py-4 sm:px-12 px-4 bg-gray-100 mt-6 flex justify-start rounded-bl rounded-br">
             <button
               className="bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-2 text-sm focus:outline-none"
               type="submit"
