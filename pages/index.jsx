@@ -52,16 +52,14 @@ const Index = () => {
       <form onSubmit={handleSubmit}>
         <div className="container mx-auto shadow bg-white  rounded">
           <div className="w-11/12 mx-auto">
+            <img
+              src="/images/registration.jpg"
+              alt=""
+              className="w-full lg:w-9/12 object-contain overflow-hidden rounded shadow"
+            />
             <div className="xl:w-9/12 mx-auto xl:mx-0">
-              <div className="bg-center bg-cover bg-no-repeat rounded relative mt-6 h-48">
-                <img
-                  src="/images/registration.jpg"
-                  alt=""
-                  className="w-full object-cover overflow-hidden rounded shadow"
-                />
-              </div>
               <div className="flex justify-between flex-col md:flex-row md:space-x-4 mt-8">
-                <div className="mt-2 flex flex-col xl:w-2/6 lg:w-2/6 w-full">
+                <div className="flex flex-col xl:w-2/6 lg:w-2/6 w-full">
                   <label
                     htmlFor="firstName"
                     className="pb-2 text-sm font-bold text-gray-800 "
