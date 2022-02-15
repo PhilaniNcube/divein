@@ -207,10 +207,10 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <div className="w-full py-4 sm:px-12 px-4 bg-gray-300 mt-6 flex justify-start rounded-bl rounded-br">
+          <div className="w-full py-4 sm:px-12 px-4 mt-6 flex justify-start rounded-bl rounded-br">
             <button
               disabled={loading}
-              className="bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-2 text-sm focus:outline-none"
+              className="bg-custom transition duration-150 ease-in-out  rounded text-white px-8 py-2 text-sm focus:outline-none"
               type="submit"
             >
               {loading ? 'Loading...' : 'Register'}
