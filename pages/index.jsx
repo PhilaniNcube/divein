@@ -215,6 +215,23 @@ const Index = () => {
             </button>
           </div>
         </div>
+   <div className="w-11/12 lg:w-9/12 mx-auto py-2 px-3">
+          <p className="font-bold text-md">POPIA COMPLIANT</p>
+          <p className="text-sm">
+            The Protection of Personal Information Act (POPI Act) comes into
+            effect on 1 July 2021 and to remain compliant with its provisions
+            SAIMI would like to give you, as its stakeholder, the opportunity to
+            unsubscribe should you wish to not receive any further communication
+            from SAIMI.
+          </p>
+          <p className="text-sm mt-1">
+            SAIMI regularly sends communication to its stakeholders to inform
+            them of any upcoming events and other industry related news. Your
+            email address forms part of the SAIMI stakeholders’ database and is
+            used for the purpose of communicating the abovementioned
+            information.
+          </p>
+        </div>
       </form>
     </div>
   );
