@@ -57,7 +57,7 @@ const Index = () => {
                 <img
                   src="/images/registration.jpg"
                   alt=""
-                  className="w-full h-full object-cover overflow-hidden rounded shadow"
+                  className="w-full object-cover overflow-hidden rounded shadow"
                 />
               </div>
               <div className="flex justify-between flex-col md:flex-row md:space-x-4 mt-8">
